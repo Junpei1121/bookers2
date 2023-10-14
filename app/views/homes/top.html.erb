@@ -1,2 +1,21 @@
-<li><%= link_to "Log in", new_user_session_path %></li>
-<li><%= link_to "Sign up", new_user_registration_path %></li>
+<%= flash[:notice]%>
+<div class="container">
+  <div class="row">
+    <div class="mx-auto col-11 col-sm-10 col-lg-8 col-xl-6">
+      <h1>Welcome to <span><i class="fa-solid fa-book"></i></span>
+      <strong>Bookers</strong>!!</h1>
+      <p>In <span><i class="fa-solid fa-book"></i></span>
+      <strong>Bookers</strong>,</p>
+      <p>you can share and exchange your opinions , inpressions , and emotions</p>
+      <p>about various books!</p>
+      <div class="btn-wrapper col-10 mx-auto">
+      <div class="row">
+      <a class="btn btn-info mb-3 btn-block btn-sm" href="users/sign_in" role="button">Log in</a>
+      </div>
+      <div class="row">
+      <a class="btn btn-success btn-block btn-sm" href="users/sign_up" role="button">Sign up</a>
+      </div>
+      </div>
+    </div>
+  </div>
+</div>

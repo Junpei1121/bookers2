@@ -28,6 +28,10 @@
         <%=link_to book.title,book_path(book) %>
       </td>
       <td><%= book.body %></td>
+        <% if @book.user == current_user %>
+        <td><%= link_to "edit", edit_book_path(@book.id),class: "btn btn-sm btn-success"%></td>
+        <td><%= link_to "destroy", book_path, method: :delete, "data-confirm" => "本当に削除しますか？",class: "btn btn-sm btn-danger" %></td>
+        <%end%>
     </tr>
   </tbody>
   <%end%>

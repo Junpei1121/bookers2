@@ -1,1 +1,3 @@
-<%= render 'sidebar', user: @user,book: @book%>
+<%= flash[:notice]%>
+
+<%= render 'users/sidebar', user: @user,book: @book%>
